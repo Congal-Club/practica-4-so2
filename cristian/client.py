@@ -2,7 +2,7 @@ from socket import socket, AF_INET, SOCK_STREAM
 import datetime
 import time
 
-host = 'localhost'
+host = '192.168.0.106'
 port = 3000
 
 def convert_string_to_hour(string):

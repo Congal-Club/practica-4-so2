@@ -1,14 +1,16 @@
 from socket import socket, AF_INET, SOCK_STREAM
 from datetime import *
 
-host = 'localhost'
+host = '0.0.0.0'
 port = 3000
 
 def main():
     # Creamos un servidor con sockets
     server = socket(AF_INET, SOCK_STREAM)
     server.bind((host, port))
-    server.listen()
+    server.listen(5)
+
+    print(f'Servidor escuchando en el puerto {port}')
 
     while True:
         # Establecemos la conexión
